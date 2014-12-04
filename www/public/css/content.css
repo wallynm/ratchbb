@@ -1,0 +1,74 @@
+#main-content {
+  box-shadow: rgb(0, 0, 0) 0px 5px 5px 0px;
+}
+#left-drawer {
+  margin-top: 44px;
+  overflow: hidden;
+}
+
+
+
+
+
+
+
+.lines-button {
+  padding: 1rem 0.5rem;
+  transition: .3s;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 0.285715rem;
+  /* */
+}
+.lines-button:hover {
+  opacity: 1;
+}
+.lines-button:active {
+  transition: 0;
+}
+
+.lines {
+  display: inline-block;
+  width: 25px;
+  height: 4px;
+  background: #000;
+  border-radius: 0.28571rem;
+  transition: 0.3s;
+  position: relative;
+}
+.lines:before, .lines:after {
+  display: inline-block;
+  width: 25px;
+  height: 4px;
+  background: #000;
+  border-radius: 0.28571rem;
+  transition: 0.3s;
+  position: absolute;
+  left: 0;
+  content: '';
+  -webkit-transform-origin: 0.28571rem center;
+  transform-origin: 0.28571rem center;
+}
+.lines:before {
+  top: 0.4rem;
+}
+.lines:after {
+  top: -0.4rem;
+}
+
+.lines-button.x.close .lines {
+  background: transparent;
+}
+.lines-button.x.close .lines:before, .lines-button.x.close .lines:after {
+  -webkit-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  top: 0;
+}
+.lines-button.x.close .lines:before {
+  -webkit-transform: rotate3d(0, 0, 1, 45deg);
+  transform: rotate3d(0, 0, 1, 45deg);
+}
+.lines-button.x.close .lines:after {
+  -webkit-transform: rotate3d(0, 0, 1, -45deg);
+  transform: rotate3d(0, 0, 1, -45deg);
+}
